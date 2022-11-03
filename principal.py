@@ -1,3 +1,3 @@
-criar trabalho floresta iris
+import streamlit as st
+
 st.write
-import iris
