@@ -1,1 +1,1 @@
-informa elementos do projeto
+streamlit
