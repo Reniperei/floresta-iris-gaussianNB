@@ -6,7 +6,6 @@ st.write ('criando IA')
 import pandas as pd
 import numpy as np
   
-# store the feature matrix (X) and response vector (y)
 X = iris.data[:6]
 y = iris.target[:6]
 print("X:", X)
