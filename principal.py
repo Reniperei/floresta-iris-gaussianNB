@@ -1,62 +1,7 @@
 import streamlit as st
 
 st.title('naive bayes IA iris')
-st.write ('criando IA iris')
-st.number_input
-st.text_input
-st.file_uploader
-st.image
-st.columns
-st.tabs
-st.container
-st.dataframe
-st.metric
-st.experimental_show
-st.pyplot
-st.code
-
-from sklearn.datasets import load_iris
-iris = load_iris()
-  
-# store the feature matrix (X) and response vector (y)
-X = iris.data[:6]
-y = iris.target[:6]
-print("X:", X)
-print("Y:",y)
-
-# splitting X and y into training and testing sets
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.6, random_state=4)
-  
-# training the model on training set
-from sklearn.naive_bayes import GaussianNB
-gnb = GaussianNB()
-gnb.fit(X_train, y_train)
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Reniperei 
-evan-wes
-/
-An-Interactive-and-Educational-Streamlit-Webapp
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-An-Interactive-and-Educational-Streamlit-Webapp/sklearn_naive_bayes_iris_example.py /
-@evan-wes
-evan-wes Session state and function caching implemented
-…
-Latest commit 1f38e47 on 19 Jul 2021
- History
- 1 contributor
-1158 lines (929 sloc)  61.8 KB
+st.write ('criando IA')
 
 import streamlit as st
 import pandas as pd
