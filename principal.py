@@ -32,7 +32,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.6, random_
 from sklearn.naive_bayes import GaussianNB
 gnb = GaussianNB()
 gnb.fit(X_train, y_train)
-Search or jump to…
 Pull requests
 Issues
 Marketplace
