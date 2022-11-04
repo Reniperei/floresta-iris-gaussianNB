@@ -1,5 +1,5 @@
 import streamlit as st
-from skleran.naive_bayes import GaussianNB
+from sklearn.naive_bayes import GaussianNB
 dados=pd.read_csv('Iris -Iris.csv')
 st.title('naive bayes IA iris')
 st.write ('criando IA')
