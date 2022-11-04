@@ -71,12 +71,6 @@ def iris_example():
   # Train the classifier
  classifier.fit(iris_features_train, iris_species_train)
  
-
- 
-  iris_df.target.replace({0: 'setosa', 1: 'versicolor', 2: 'virginica'}, inplace=True)
-
-  iris_features_train, iris_features_test, iris_species_train, iris_species_test \
-   = train_test_split(iris_df.data, iris_df.target, train_size=0.6, shuffle=True, random_state=42)
         
   classifier = GaussianNB()
 
