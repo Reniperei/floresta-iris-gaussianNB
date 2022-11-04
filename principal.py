@@ -71,8 +71,6 @@ def iris_example():
   # Train the classifier
  classifier.fit(iris_features_train, iris_species_train)
  
-        
-  classifier = GaussianNB()
 
   classifier.fit(iris_features_train, iris_species_train)
 
