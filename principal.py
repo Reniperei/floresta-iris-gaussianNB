@@ -5,24 +5,16 @@ st.title('naive bayes IA iris')
 st.write ('criando IA')
 
 import pandas as pd
-import numpy as np
-  
-X = iris.data[:4]
-y = iris.target[:4]
-print("X:", X)
-print("Y:",y)
-
-# splitting X and y into training and testing sets
+classes=dados['Species']
+nomesColunas=dados.columns.to_list()
+tamanho=len(nomesColunas)
+nomesColunas= nomesColunas[1:tamanho-1]
+features=dados[nomesColunas]
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.6, random_state=4)
-  
-# training the model on training set
-from sklearn.naive_bayes import GaussianNB
-gnb = GaussianNB()
-gnb.fit(X_train, y_train)
-  
-# making predictions on the testing set
-y_pred = gnb.predict(X_test)
+features_treino,features_teste,classes_treino,classes_teste= train_test_split(features,classes,test_size=0,26,randon_state=3)
+model=GaussianNB()
+
+                                                                              
   
 # comparing actual response values (y_test) with predicted response values (y_pred)
 from sklearn import metrics
