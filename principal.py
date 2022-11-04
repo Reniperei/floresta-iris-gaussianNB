@@ -72,17 +72,6 @@ def iris_example():
  classifier.fit(iris_features_train, iris_species_train)
  
 
-  print(classification_report(iris_species_predict, iris_species_test))
-  # Create confusion matrix DataFrame
-  cm_df = pd.DataFrame(data=confusion_matrix(iris_species_predict, iris_species_test), columns=iris_df.target_names, index=iris_df.target_names)
-  print('Confusion matrix:')
-  print(cm_df)
-  # Create a heatmap of the confusion matrix
-  fig, ax = plt.subplots()
-  ax = sns.heatmap(cm_df.values.tolist(), annot=True, fmt='0.3g', cmap='bone')
-  ax.set_title('Confusion matrix heatmap')
-  ax.set_xlabel('Species')
-  ax.set_ylabel('Species')
   fig.show()
                
      
