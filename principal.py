@@ -71,9 +71,7 @@ def iris_example():
   # Train the classifier
  classifier.fit(iris_features_train, iris_species_train)
  
-  # Compute predictions for the testing data
-  iris_species_predict = classifier.predict(iris_features_test)
-  print('Classification report:')
+
   print(classification_report(iris_species_predict, iris_species_test))
   # Create confusion matrix DataFrame
   cm_df = pd.DataFrame(data=confusion_matrix(iris_species_predict, iris_species_test), columns=iris_df.target_names, index=iris_df.target_names)
