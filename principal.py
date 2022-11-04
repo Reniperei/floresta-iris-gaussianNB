@@ -66,18 +66,18 @@ def iris_example():
                 fig.show()
                
      
-        with button_col:
-        run_button = st.button('Run Code', key=run_button_key, on_click=button_created(run_button_key))
-        st.subheader('Output:')
-        output_col1, output_col2 = st.beta_columns(2)
+               with button_col:
+               run_button = st.button('Run Code', key=run_button_key, on_click=button_created(run_button_key))
+               st.subheader('Output:')
+               output_col1, output_col2 = st.beta_columns(2)
 
     if run_button or st.session_state[run_button_key+'_dict']['was_pressed']:
         st.session_state[run_button_key+'_dict']['was_pressed'] = True
 
-        iris_df = load_iris(as_frame=True)
-        iris_df.target.replace({0: 'setosa', 1: 'versicolor', 2: 'virginica'}, inplace=True)
+              iris_df = load_iris(as_frame=True)
+              iris_df.target.replace({0: 'setosa', 1: 'versicolor', 2: 'virginica'}, inplace=True)
 
-        iris_features_train, iris_features_test, iris_species_train, iris_species_test \
+              iris_features_train, iris_features_test, iris_species_train, iris_species_test \
             = train_test_split(iris_df.data, iris_df.target, train_size=0.6, shuffle=True, random_state=42)
         
         classifier = GaussianNB()
