@@ -70,8 +70,7 @@ def iris_example():
                 
   # Train the classifier
  classifier.fit(iris_features_train, iris_species_train)
-   # Compute the classification score
-  print('Classifier accuracy: {classifier.score(iris_features_test, iris_species_test)}')
+ 
   # Compute predictions for the testing data
   iris_species_predict = classifier.predict(iris_features_test)
   print('Classification report:')
