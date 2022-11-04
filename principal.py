@@ -5,10 +5,6 @@ st.write ('criando IA')
 
 import pandas as pd
 import numpy as np
-
-
-from sklearn.datasets import load_iris
-iris = load_iris('/content/drive/MyDrive/IA claudio/Iris - Iris (1).csv')
   
 # store the feature matrix (X) and response vector (y)
 X = iris.data[:6]
