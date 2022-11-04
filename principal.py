@@ -71,10 +71,8 @@ def iris_example():
   # Train the classifier
  classifier.fit(iris_features_train, iris_species_train)
  
-
-  fig.show()
                
-     
+    
   if button_col:
     run_button = st.button('Run Code', key=run_button_key, on_click=button_created(run_button_key))
     st.subheader('Output:')
