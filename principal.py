@@ -66,10 +66,10 @@ def iris_example():
                 fig.show()
                
      
-    with button_col:
+        with button_col:
         run_button = st.button('Run Code', key=run_button_key, on_click=button_created(run_button_key))
-    st.subheader('Output:')
-    output_col1, output_col2 = st.beta_columns(2)
+        st.subheader('Output:')
+        output_col1, output_col2 = st.beta_columns(2)
 
     if run_button or st.session_state[run_button_key+'_dict']['was_pressed']:
         st.session_state[run_button_key+'_dict']['was_pressed'] = True
