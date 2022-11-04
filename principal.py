@@ -72,31 +72,6 @@ def iris_example():
  classifier.fit(iris_features_train, iris_species_train)
  
 
-  classifier.fit(iris_features_train, iris_species_train)
-
-  iris_species_predict = classifier.predict(iris_features_test)
-
-  # Create confusion matrix DataFrame
-  cm_df = pd.DataFrame(data=confusion_matrix(iris_species_predict, iris_species_test), columns=iris_df.target_names, index=iris_df.target_names)
-
-  # Make a heatmap of the confusion matrix
-  fig, ax = plt.subplots()
-  fig = matrix_heatmap(cm_df.values.tolist(), options={'x_labels': iris_df.target_names,'y_labels': iris_df.target_names, 'annotation_format': '.3g', 'color_map': 'bone_r', 'custom_range': False, 'vmin_vmax': (-1,1), 'center': None, 'title_axis_labels': ('Confusion matrix heatmap', 'Species', 'Species'), 'rotate x_tick_labels': True})
-   
-  if output_col1:
-  st.write(f'**Classifier accuracy:** {classifier.score(iris_features_test, iris_species_test)}')
-
-  st.write('**Classification report:**')
-  st.text('.  \n'+classification_report(iris_species_predict, iris_species_test))
-
-  st.write('**Confusion matrix:**')
-  st.write(cm_df)
-
-  if output_col2:              
-  st.pyplot(fig)
-  st.subheader('')
-
-  st.header('Tuning the model')
     
   
    
