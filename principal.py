@@ -4,7 +4,6 @@ st.title('naive bayes IA iris')
 st.write ('criando IA')
 
 import pandas as pd
-from sklearn.naive_bayes import  GaussianNB
 import numpy as np
 
 
