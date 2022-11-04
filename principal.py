@@ -4,7 +4,6 @@ st.title('naive bayes IA iris')
 st.write ('criando IA')
 
 import pandas as pd
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 import seaborn as sns
 
