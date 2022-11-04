@@ -6,8 +6,8 @@ st.write ('criando IA')
 import pandas as pd
 import numpy as np
   
-X = iris.data[:6]
-y = iris.target[:6]
+X = iris.data[:4]
+y = iris.target[:4]
 print("X:", X)
 print("Y:",y)
 
@@ -38,16 +38,6 @@ from sklearn.model_selection import train_test_split
 
 # Import sklearn metrics for analysis
 from sklearn.metrics import classification_report, confusion_matrix
-
-# Import heatmap plotting function
-from matrix_heatmap import matrix_heatmap
-
-# Import custom latex display and numbering class
-from latex_equation_numbering import latex_equation_numbering
-
-# Load helpers
-from helpers import button_created, button_changed
-
 
 def iris_example():
 
