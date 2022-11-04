@@ -40,10 +40,10 @@ def iris_example():
  # Split the data
  iris_features_train, iris_features_test, iris_species_train, iris_species_test = train_test_split(iris_df.data, iris_df.target, train_size=0.6, shuffle=True, random_state=42)
    # Instantiate a classifier
-  classifier = GaussianNB()
+ classifier = GaussianNB()
                 
   # Train the classifier
-   classifier.fit(iris_features_train, iris_species_train)
+ classifier.fit(iris_features_train, iris_species_train)
    # Compute the classification score
     print(f'Classifier accuracy: {classifier.score(iris_features_test, iris_species_test)}')
      # Compute predictions for the testing data
