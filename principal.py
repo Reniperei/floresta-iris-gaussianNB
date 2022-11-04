@@ -4,8 +4,8 @@ st.title('naive bayes IA iris')
 st.write ('criando IA')
 
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+from sklearn.naive_bayes import  GaussianNB
+import numpy as np
 
 
 from sklearn.datasets import load_iris
