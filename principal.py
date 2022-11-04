@@ -72,7 +72,7 @@ def iris_example():
  classifier.fit(iris_features_train, iris_species_train)
  
 
-  iris_df = load_iris(as_frame=True)
+ 
   iris_df.target.replace({0: 'setosa', 1: 'versicolor', 2: 'virginica'}, inplace=True)
 
   iris_features_train, iris_features_test, iris_species_train, iris_species_test \
