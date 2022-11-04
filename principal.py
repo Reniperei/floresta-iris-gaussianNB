@@ -47,7 +47,7 @@ print(metrics.classification_report(classes_teste,predicoes))
 
 from sklearn.naive_bayes import GaussianNB 
 import numpy as np  #importa dados csv
-dados=pd.read_csv('/content/drive/MyDrive/naive bayes2.ipynb')
+dados=pd.read_csv('/content/drive/MyDrive/IA claudio/Iris - Iris (1).csv')
 #importa a biblioteca do modelo Naive Bayes Gaussiano
 #import pandas as pd #manipulacao de dados
 from sklearn.naive_bayes import  GaussianNB
@@ -55,7 +55,7 @@ import numpy as np
 
 
 x = np.array([[1,2],[1,2],[1,2],[-2,0],[2,3],[-4,0],[-1,1],[1,2],[-2,2],[2,7],[-4,1],[0,0]])
-y = np.array([15, 15, 15, 3, 4, 10, 3, 15, 3, 4, 4,7 ])
+y = np.array([10, 10, 15, 4, 3, 10, 3, 15, 4, 3, 4,6 ])
 
 
 # splittin X and y into training and testing sets
@@ -70,14 +70,12 @@ model.fit(x_train, y_train)
 
 #resultado de previsão
 
-teste = np.array([[-4,0],[0,0],[-2,0],[2,7]])
+teste = np.array([[-1,1],[1,2],[-2,3],[-3,6]])
 #predicted = model.predict([[1,2][0,0]]) #fazer a previsão em cima desses 2 numeros
 predicted = model.predict(teste) #fazer a previsão em cima desse array teste
 print(predicted)
 
-#comparing actual response values (y_test) with predicted response values (y_pred)
-from sklearn import metrics
-print("Gaussian Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
+
 
   
 
