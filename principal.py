@@ -33,8 +33,8 @@ from helpers import button_created, button_changed
 def iris_example():
 
  
-from sklearn.datasets import load_iris
-# Load the data
+ from sklearn.datasets import load_iris
+ # Load the data
  iris_df = load_iris(as_frame=True)
  iris_df.target.replace({0: 'setosa', 1: 'versicolor', 2: 'virginica'}, inplace=True)
  # Split the data
