@@ -33,9 +33,6 @@ from helpers import button_created, button_changed
 def iris_example():
 
  
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.datasets import load_iris
 # Load the data
  iris_df = load_iris(as_frame=True)
