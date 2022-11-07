@@ -14,6 +14,13 @@ from sklearn.model_selection import train_test_split
 features_treino,features_teste,classes_treino,classes_teste= train_test_split(features,classes,test_size=0,26,randon_state=3)
 model=GaussianNB()
 
+floresta = RandomForestClassifier(n_estimators=90) 
+
+floresta.fit(features_treino,classes_treino)
+predicoes = floresta.predict(features_teste)
+from sklearn import metrics 
+print(metrics.classification_report(classes_teste,predicoes))
+
                                                                               
   
 # comparing actual response values (y_test) with predicted response values (y_pred)
