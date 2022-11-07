@@ -20,6 +20,7 @@ predicoes = floresta.predict(features_teste)
 from sklearn import metrics 
 print(metrics.classification_report(classes_teste,predicoes))
 
+
                               
 
 
