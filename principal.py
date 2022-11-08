@@ -22,8 +22,8 @@ predicoes=model.predict(features_teste)
 st.title('naive bayes IA iris')
 SepalLengthCm=st.number_input('digite comprimento do caule')
 SepalWidthCm=st.number_input('digite largura do caule')
-PetalLengthCm=st.number_input('digite comprimento da petala)
-PetalWidthCm=st.number_input('digite largura da petala)
+PetalLengthCm=st.number_input('digite comprimento da petala')
+PetalWidthCm=st.number_input('digite largura da petala')
 if st.button('aplicar'):
  resultado=model.predict([[SepalLengthCm,SepalWidthCm,PetalLenthCm,PetalWidthCm]])
                              
