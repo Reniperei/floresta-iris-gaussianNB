@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 dados= pd.read_csv('Iris.csv')
 st.title('naive bayes IA iris')
 st.write ('criando IA')
