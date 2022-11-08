@@ -1,5 +1,5 @@
 import streamlit as st
-dados= pd.read_csv('')
+dados= pd.read_csv('https://github.com/Reniperei/floresta-iris-gaussianNB/blob/main/Iris%20-%20Iris.csv')
 st.title('naive bayes IA iris')
 st.write ('criando IA')
 
