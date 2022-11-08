@@ -10,7 +10,7 @@ nomesColunas=dados.columns.to_list()
 tamanho=len(nomesColunas)
 nomesColunas= nomesColunas[1:tamanho-1]
 features=dados[nomesColunas]
-from sklearn.model_selection import train_test_split features_treino,features_teste,classes_treino,classes_teste= train_test_split(features,classes,test_size=0,26,randon_state=3)
+from sklearn.model_selection import train_test_splitfeatures_train,features_test,classes_train,classes_test= train_test_split(features,classes,test_size=0,26,randon_state=3)
  model=GaussianNB()
 
 treina o modelo usando os dandos de treino
