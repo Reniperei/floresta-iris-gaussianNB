@@ -10,11 +10,35 @@ nomesColunas=dados.columns.to_list()
 tamanho=len(nomesColunas)
 nomesColunas= nomesColunas[1:tamanho-1]
 features=dados[nomesColunas]
-from sklearn.model_selection import train_test_splitfeatures_train,features_test,classes_train,classes_test= train_test_split(features,classes,test_size=0,26,randon_state=3)
- model=GaussianNB()
+from sklearn.model_selection import train_test_split
+features_treino,features_teste,classes_treino,classes_teste= train_test_split(features,classes,test_size=0,3,randon_state=4)
 
-treina o modelo usando os dandos de treino
-model.fit(x_train, y_train)
+model=GaussianNB()
+
+
+model.fit(features_treino,classes_treino)
+predicoes=model.predict(features_teste)
+
+st.title('naive bayes IA iris')
+SepalLengthCm=st.number_input('digite comprimento do caule')
+SepalWidthCm=st.number_input('digite largura do caule')
+PetalLengthCm=st.number_input('digite comprimento da petala)
+PetalWidthCm=st.number_input('digite largura da petala)
+if st.button('aplicar'):
+ resultado=model.predict([[SepalLengthCm,SepalWidthCm,PetalLenthCm,PetalWidthCm]])
+                             
+ if resultado==('Iris-setosa'):
+  st.write('setosa')
+  st.image('iris_setosa.jpg')
+                             
+ if resultado==('Iris-versicolor'):
+  st.write('versicolor')
+  st.image('iris_versicolor.jpg')
+                             
+ if resultado==('Iris-virginica'):
+  st.write('virginica')
+  st.image('iris_virginica.jpg')
+                              
 
 #resultado de previsão
 
