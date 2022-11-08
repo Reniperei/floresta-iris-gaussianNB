@@ -1,9 +1,10 @@
 import streamlit as st
+import pandas as pd
 dados= pd.read_csv('Iris.csv')
 st.title('naive bayes IA iris')
 st.write ('criando IA')
 
-import pandas as pd
+
 classes=dados['Species']
 nomesColunas=dados.columns.to_list()
 tamanho=len(nomesColunas)
