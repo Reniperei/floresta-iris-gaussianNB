@@ -11,6 +11,7 @@ tamanho=len(nomesColunas)
 nomesColunas= nomesColunas[1:tamanho-1]
 features=dados[nomesColunas]
 from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
 features_treino,features_teste,classes_treino,classes_teste= train_test_split(features,classes,test_size=0.3,random_state=4)
 
 model=GaussianNB()
