@@ -4,5 +4,5 @@ scikit-learn
 numpy
 SepalLengthCm
 SepalWidthCm
-PetalLenthCm
+PetalLengthCm
 PetalWidthCm
