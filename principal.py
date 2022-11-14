@@ -50,7 +50,7 @@ predicted = model.predict(teste) #fazer a previsão em cima desse array teste
 print(predicted)
 
 #comparing actual response values (y_test) with predicted response values (y_pred)
-from sklearn import metrics
+from scikit-learn import metrics
 print("Gaussian Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
 
 
